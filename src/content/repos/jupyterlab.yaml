@@ -1,9 +1,0 @@
-name: "JupyterLab"
-summary: ""
-draft: false
-tags:
-  - Jupyter
-  - Jupyter
-  - JupyterLab
-repoUrl: https://github.com/jupyterlab/jupyterlab
-weight: 900

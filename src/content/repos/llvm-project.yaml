@@ -1,0 +1,9 @@
+name: "LLVM Project"
+summary: ""
+draft: false
+tags:
+  - LLVM
+  - Compiler
+  - C++
+repoUrl: https://github.com/llvm/llvm-project
+weight: 600

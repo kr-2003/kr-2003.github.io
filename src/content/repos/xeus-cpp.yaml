@@ -1,0 +1,11 @@
+name: "Xeus CPP"
+summary: ""
+draft: false
+tags:
+  - C++
+  - Jupyter
+  - Xeus
+  - Kernel
+  - Notebook
+repoUrl: https://github.com/compiler-research/xeus-cpp
+weight: 800
