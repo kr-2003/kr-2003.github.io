@@ -49,14 +49,14 @@ export const LINKS: Links = [
     TEXT: "Blog",
     HREF: "/blog",
   },
-  {
-    TEXT: "Work",
-    HREF: "/work",
-  },
-  {
-    TEXT: "Videos",
-    HREF: "/videos",
-  },
+  // {
+  //   TEXT: "Work",
+  //   HREF: "/work",
+  // },
+  // {
+  //   TEXT: "Videos",
+  //   HREF: "/videos",
+  // },
 ];
 
 // Socials
