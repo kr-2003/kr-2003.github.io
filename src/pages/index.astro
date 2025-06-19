@@ -1,0 +1,108 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import TopLayout from "@layouts/TopLayout.astro";
+import { SITE, SOCIALS } from "@consts";
+import profileImage from "@assets/images/kr-2003.jpg";
+---
+
+<PageLayout title="Home" description={SITE.DESCRIPTION}>
+  <TopLayout>
+    <!-- Hero Section with Profile Image -->
+    <section class="animate flex flex-col md:flex-row items-center gap-8 mb-8">
+      <!-- Profile Image with Bubble Effect -->
+      <div class="flex-shrink-0">
+        <div class="relative">
+          <img
+            src={profileImage.src}
+            alt="Jeremy Tuloup Profile Picture"
+            class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-lg ring-4 ring-white/20 dark:ring-gray-800/50 transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+          />
+          <!-- Subtle glow effect -->
+          <div
+            class="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-400/20 to-purple-400/20 blur-sm -z-10 opacity-75"
+          >
+          </div>
+        </div>
+      </div>
+
+      <!-- Intro Text -->
+      <div class="flex flex-col gap-2 text-center md:text-left">
+        <p class="text-lg font-semibold">Hi, I'm Abhinav Kumar 👋</p>
+        <p>
+          I'm a Software Engineer at <a class="base-link" href="https://www.linkedin.com/company/google/" target="_blank"
+            >Google</a
+          > and an open source developer at <a
+            class="base-link"
+            href="https://compiler-research.org/team/AbhinavKumar"
+            target="_blank">Compiler Research(Princeton University and CERN-HSF).</a
+          >. Cracked <b> Google Summer of Code(GSoC) 2025</b> in the Compiler Research
+          organization under xeus-cpp.
+        </p>
+        <p>
+          This site is a log of posts about Compiler Research as well as
+          experiments, thoughts and other topics of interest. I hope you find
+          some of them interesting!
+        </p>
+      </div>
+    </section>
+
+    <!-- Additional Content -->
+    <section class="animate flex flex-col gap-2">
+      <p>
+        The blog on this site also contains links to posts published on other
+        platforms such as <a
+          class="base-link"
+          href="https://medium.com/@jeremy.tuloup">Medium</a
+        >.
+      </p>
+
+      <p>
+        In addition to my day-to-day work at Google, I am intersted in low level 
+        programming, compilers, operating systems and distributed systems. Currently exploring 
+        probablistic AI/ML. 
+      </p>
+    </section>
+
+    <section class="animate flex flex-wrap gap-4 justify-center mt-5">
+      <a
+        href="/blog"
+        class="py-2 px-4 rounded truncate text-xs md:text-sm lg:text-base bg-black dark:bg-white text-white dark:text-black hover:opacity-75 blend"
+      >
+        Read my blog
+      </a>
+      <a
+        href="/work"
+        class="py-2 px-4 truncate rounded text-xs md:text-sm lg:text-base border border-black/25 dark:border-white/25 hover:bg-black/5 hover:dark:bg-white/15 blend"
+      >
+        View my work
+      </a>
+    </section>
+
+    <section class="animate flex flex-wrap justify-center mt-5">
+      <div class="space-y-4">
+        <p>
+          If you have any question or want to discuss a topic, please do not
+          hesitate to contact me on any of the following mediums:
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-2 mt-5">
+          {
+            SOCIALS.map((SOCIAL) => (
+              <a
+                href={SOCIAL.HREF}
+                target="_blank"
+                aria-label={`${SITE.TITLE} on ${SOCIAL.NAME}`}
+                title={`${SOCIAL.NAME}`}
+                class="group flex rounded-full p-2 items-center justify-center hover:bg-black/5 dark:hover:bg-white/20  blend"
+              >
+                <svg class="size-4 fill-current group-hover:fill-black group-hover:dark:fill-white blend">
+                  <use href={`/social.svg#${SOCIAL.ICON}`} />
+                </svg>
+                <span class="pl-2">{SOCIAL.NAME}</span>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+  </TopLayout>
+</PageLayout>
