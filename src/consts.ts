@@ -7,19 +7,19 @@ export const SITE: Site = {
   AUTHOR: "Abhinav Kumar",
 };
 
-// // Work Page
-// export const WORK: Page = {
-//   TITLE: "Work",
-//   DESCRIPTION:
-//     "My work on Project Jupyter, open source, and prior experiences.",
-// };
+// Work Page
+export const WORK: Page = {
+  TITLE: "Work",
+  DESCRIPTION:
+    "My work and experiences.",
+};
 
-// // Videos Page
-// export const VIDEOS: Page = {
-//   TITLE: "Videos",
-//   DESCRIPTION:
-//     "A selection of talks and tutorials given at conferences and published on YouTube.",
-// };
+// Videos Page
+export const VIDEOS: Page = {
+  TITLE: "Videos",
+  DESCRIPTION:
+    "A selection of talks and tutorials given at conferences and published on YouTube.",
+};
 
 // Blog Page
 export const BLOG: Page = {
